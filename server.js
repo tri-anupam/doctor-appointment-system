@@ -38,7 +38,7 @@ app.use("/api/v1/doctor", require("./routes/doctorRoutes"));
 app.get("/", (req, res) => {
   res.status(200).send("Hello from server side");
 });
-const port = process.env.PORT || 8000;
+const port = 8000;
 //listen port
 app.listen(port, () => {
   console.log(

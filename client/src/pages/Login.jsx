@@ -10,6 +10,7 @@ import backimg from "../assets/apply-doc.webp";
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  axios.defaults.withCredentials = true;
   //form handler
   const onFinishHandler = async (values) => {
     try {
