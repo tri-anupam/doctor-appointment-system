@@ -21,7 +21,7 @@ const BookingPage = () => {
   const getAllDoctors = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/v1/doctor/getDoctorById",
+        "https://doctor-appointment-system-sigma.vercel.app/api/v1/doctor/getDoctorById",
         { doctorId: params.doctorId },
         {
           headers: {
@@ -45,7 +45,7 @@ const BookingPage = () => {
       }
       dispatch(showLoading());
       const res = await axios.post(
-        "http://localhost:8000/api/v1/user/book-appointment",
+        "https://doctor-appointment-system-sigma.vercel.app/api/v1/user/book-appointment",
         {
           doctorId: params.doctorId,
           userId: user._id,
@@ -76,7 +76,7 @@ const BookingPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "http://localhost:8000/api/v1/booking-availibility",
+        "https://doctor-appointment-system-sigma.vercel.app/api/v1/booking-availibility",
         { doctorId: params.doctorId, date, time },
         {
           headers: {

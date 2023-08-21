@@ -16,7 +16,7 @@ const Register = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        `http://localhost:8000/api/v1/user/register`,
+        `https://doctor-appointment-system-sigma.vercel.app/api/v1/user/register`,
         values
       );
       dispatch(hideLoading());

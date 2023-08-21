@@ -15,7 +15,7 @@ const Login = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "http://localhost:8000/api/v1/user/login",
+        "https://doctor-appointment-system-sigma.vercel.app/api/v1/user/login",
         values
       );
       dispatch(hideLoading());

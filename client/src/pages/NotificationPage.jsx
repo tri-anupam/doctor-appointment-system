@@ -17,7 +17,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "http://localhost:8000/api/v1/user/get-all-notification",
+        "https://doctor-appointment-system-sigma.vercel.app/api/v1/user/get-all-notification",
         { userId: user._id },
         {
           headers: {
@@ -43,7 +43,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "http://localhost:8000/api/v1/user/delete-all-notification",
+        "https://doctor-appointment-system-sigma.vercel.app/api/v1/user/delete-all-notification",
         { userId: user._id },
         {
           headers: {

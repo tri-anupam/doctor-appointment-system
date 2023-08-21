@@ -25,7 +25,7 @@ app.use(
 );
 app.use(
   cors({
-    origin: ["https://doctor-appointment-system-api.vercel.app"],
+    origin: ["https://doctor-appointment-system-sigma.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
