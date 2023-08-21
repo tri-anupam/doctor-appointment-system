@@ -5,6 +5,13 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+app.use(
+  cors({
+    origin: ["https://doctor-appointment-system-frontend.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 //dotenv config
 dotenv.config();
 
@@ -21,13 +28,6 @@ app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: true,
-  })
-);
-app.use(
-  cors({
-    origin: ["https://doctor-appointment-system-frontend.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
   })
 );
 
