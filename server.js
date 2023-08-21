@@ -23,7 +23,13 @@ app.use(
     extended: true,
   })
 );
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://doctor-appointment-system-one.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 //routes
 app.use("/api/v1/user", require("./routes/userRoutes"));
