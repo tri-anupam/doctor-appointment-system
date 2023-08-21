@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./app.css";
+import "./App.css";
 //--
 import { useSelector } from "react-redux";
 import Spinner from "./components/Spinner";
