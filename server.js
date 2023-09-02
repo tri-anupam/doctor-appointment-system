@@ -5,6 +5,8 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+const app = express();
+
 app.use(
   cors({
     origin: ["https://doctor-appointment-system-frontend.vercel.app"],
@@ -31,7 +33,6 @@ dotenv.config();
 connectDB();
 
 //rest object
-const app = express();
 
 //middlewares
 app.use(express.json());
