@@ -12,6 +12,18 @@ app.use(
     credentials: true,
   })
 );
+
+// Enable CORS for all routes
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://doctor-appointment-system-frontend.vercel.app"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
 //dotenv config
 dotenv.config();
 
